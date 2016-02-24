@@ -1,0 +1,10 @@
+Bios new
+<h2 class="user_new_box_title">New Profile</h2>
+<%= form_for @bio do |f| %>
+<%= f.text_field :gender, :placeholder => 'Gender' %>
+<%= f.text_field :name, :placeholder => 'Name' %>
+<%= f.text_field :pain_type, :placeholder => 'Type' %>
+<%= f.text_field :frequency, :placeholder => 'Frequency' %>
+<%= f.text_field :goal, :placeholder => 'Goal' %>
+<%= f.submit :create, :value => "Save" %>
+<% end %>

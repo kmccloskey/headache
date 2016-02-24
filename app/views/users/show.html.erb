@@ -1,0 +1,8 @@
+Users Show
+		<% if @user.id == @current_user.id %>
+		<%= link_to "Signout", log_out_path, :class => "sign_out_button" %>
+		<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
+			<% end %>
+<%= link_to "New Instance", new_instance_path %>
+<%= link_to "All Instances", instance_path %>
+
