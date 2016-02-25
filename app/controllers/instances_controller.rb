@@ -1,11 +1,12 @@
 class InstancesController < ApplicationController
-
+	
 	def create
 		puts "Creating a New Instance"
-		@user = current_user
 		@instance = Instance.new(instance_params)
+		@user = current_user
 		@instance.save
-		redirect_to instance_path(@instance)
+		@user.instances.push @instance
+		redirect_to user_path(@user)
 	end
 
 	def new
