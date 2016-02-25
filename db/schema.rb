@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224203331) do
+ActiveRecord::Schema.define(version: 20160225162556) do
 
   create_table "bios", force: :cascade do |t|
     t.string   "gender"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160224203331) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "pain_type"
+    t.integer  "user_id"
   end
 
   create_table "instance_medications", force: :cascade do |t|
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160224203331) do
     t.string   "weather"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "medications", force: :cascade do |t|

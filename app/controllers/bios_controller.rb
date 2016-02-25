@@ -10,9 +10,10 @@ class BiosController < ApplicationController
 
 	def create
 		puts "Creating a New Bio"
-		@user = current_user
 		@bio = Bio.new(bio_params)
+		@user = current_user
 		@bio.save
+		@user.bio = @bio
 		redirect_to user_path(@user)
 	end
 

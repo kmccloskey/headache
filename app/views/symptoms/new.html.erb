@@ -1,0 +1,7 @@
+Symptoms New
+<h2 class="user_new_box_title">New Symptom</h2>
+<%= form_for @symptom do |f| %>
+<%= f.text_field :description, :placeholder => 'Description' %>
+<%= f.text_field :name, :placeholder => 'Name' %>
+<%= f.submit :create, :value => "Save" %>
+<% end %>

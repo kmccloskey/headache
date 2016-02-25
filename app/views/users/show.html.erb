@@ -1,8 +1,15 @@
 Users Show
+<br>
 		<% if @user.id == @current_user.id %>
 		<%= link_to "Signout", log_out_path, :class => "sign_out_button" %>
+		<br>
 		<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
 			<% end %>
+			<br>
 <%= link_to "New Instance", new_instance_path %>
+<br>
 <%= link_to "All Instances", instance_path %>
-
+<br>
+<%= link_to "Update Bios", new_bio_path %>
+<br>
+<%= link_to "New Symptom", new_symptom_path %>

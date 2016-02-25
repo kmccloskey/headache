@@ -7,4 +7,6 @@ class Instance < ActiveRecord::Base
 
     has_many :medications, through: :instance_medications
     has_many :instance_medications
+
+    belongs_to :user
 end
