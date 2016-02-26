@@ -19,4 +19,16 @@ class User < ActiveRecord::Base
 
 	  has_many :user_medications
 	  has_many :medications, through: :user_medications
+
+	  has_many :user_reliefs
+	  has_many :reliefs, through: :user_reliefs
+
+	  has_many :user_locations
+	  has_many :locations, through: :user_locations
+
+	  has_many :user_affects
+	  has_many :affects, through: :user_affects
+
+	  has_many :user_weathers
+	  has_many :weathers, through: :user_weathers
 end
