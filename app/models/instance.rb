@@ -14,5 +14,17 @@ class Instance < ActiveRecord::Base
     has_many :triggers, through: :instance_triggers
     has_many :instance_triggers
 
+    has_many :reliefs, through: :instance_reliefs
+    has_many :instance_reliefs
+
+    has_many :locations, through: :instance_locations
+    has_many :instance_locations
+
+    has_many :affects, through: :instance_affects
+    has_many :instance_affects
+
+    has_many :weathers, through: :instance_weathers
+    has_many :instance_weathers
+
     belongs_to :user
 end

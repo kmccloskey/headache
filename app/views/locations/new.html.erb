@@ -1,0 +1,7 @@
+locations New
+<h2 class="user_new_box_title">New location</h2>
+<%= form_for @location do |f| %>
+<%= f.text_field :description, :placeholder => 'Description' %>
+<%= f.text_field :title, :placeholder => 'Title' %>
+<%= f.submit :create, :value => "Save" %>
+<% end %>
