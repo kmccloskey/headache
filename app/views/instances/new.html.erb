@@ -1,8 +1,5 @@
 <h2 class="user_new_box_title">New Instance</h2>
 <%= form_for @instance do |i| %>
-<%= i.text_field :sense, :placeholder => 'Did you sense it?' %>
-<%= i.text_field :relief, :placeholder => 'Did you find relief?' %>
-<%= i.text_field :affect, :placeholder => 'How did this affect your day?' %>
-<%= i.text_field :weather, :placeholder => 'What was the weather like' %>
+<%= i.text_field :pain_type, :placeholder => 'Headache or Migrane' %>
 <%= i.submit :create, :value => "Create New Instance" %>
 <% end %>

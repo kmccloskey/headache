@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225162556) do
+ActiveRecord::Schema.define(version: 20160226164952) do
 
   create_table "bios", force: :cascade do |t|
     t.string   "gender"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20160225162556) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "instance_senses", force: :cascade do |t|
+    t.integer  "instance_id"
+    t.integer  "sense_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "instance_symptoms", force: :cascade do |t|
     t.integer  "instance_id"
     t.integer  "symptom_id"
@@ -46,13 +53,10 @@ ActiveRecord::Schema.define(version: 20160225162556) do
   end
 
   create_table "instances", force: :cascade do |t|
-    t.string   "sense"
-    t.string   "relief"
-    t.string   "affect"
-    t.string   "weather"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.string   "pain_type"
   end
 
   create_table "medications", force: :cascade do |t|
@@ -61,6 +65,13 @@ ActiveRecord::Schema.define(version: 20160225162556) do
     t.integer  "dose"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "senses", force: :cascade do |t|
+    t.string   "sense"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "how_sense"
   end
 
   create_table "symptoms", force: :cascade do |t|
@@ -72,6 +83,34 @@ ActiveRecord::Schema.define(version: 20160225162556) do
 
   create_table "triggers", force: :cascade do |t|
     t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_medications", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "medication_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "user_senses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "sense_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_symptoms", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "symptom_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_triggers", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "trigger_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

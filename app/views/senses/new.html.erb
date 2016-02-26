@@ -1,0 +1,7 @@
+New Sense
+<h2 class="user_new_box_title">New Sense</h2>
+<%= form_for @sense do |f| %>
+<%= f.text_field :sense, :placeholder => 'Did you sense it?' %>
+<%= f.text_field :how_sense, :placeholder => 'How did you sense it' %>
+<%= f.submit :create, :value => "Save" %>
+<% end %>

@@ -1,0 +1,6 @@
+Trigger New
+<h2 class="user_new_box_title">New Trigger</h2>
+<%= form_for @trigger do |f| %>
+<%= f.text_field :title, :placeholder => 'What Triggered It' %>
+<%= f.submit :create, :value => "Save" %>
+<% end %>
