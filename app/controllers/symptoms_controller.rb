@@ -9,10 +9,10 @@ class SymptomsController < ApplicationController
 	def create
 		puts "Creating a New Symptom"
 		@symptom = Symptom.new(symptom_params)
-		@user = current_user
 		@symptom.save
-		@user.symptoms.push @symptom
-		redirect_to user_path(@user)
+		current_user.symptoms.push @symptom
+		current_user.instances.last.symptoms.push @symptom
+		redirect_to user_path(current_user)
 	end
 	def index
 		

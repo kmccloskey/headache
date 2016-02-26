@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	puts "TEST SIGNING OUT"
+  	puts "TEST: SIGNING OUT"
 		if current_user
 			session[:user_id] = nil
 			# session.clear

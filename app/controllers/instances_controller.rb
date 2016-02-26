@@ -27,7 +27,7 @@ class InstancesController < ApplicationController
 
 private
 	def instance_params
-		params.require(:instance).permit(:sense, :relief, :affect, :weather)
+		params.require(:instance).permit(:pain_type)
 	end
 
 end
