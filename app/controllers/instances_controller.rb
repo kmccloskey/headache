@@ -6,11 +6,12 @@ class InstancesController < ApplicationController
 		@user = current_user
 		@instance.save
 		@user.instances.push @instance
-		redirect_to user_path(@user)
+		redirect_to new_sense_path
 	end
 
 	def new
 		@instance = Instance.new
+		@user = User.find(params[:user_id])
 		@current_user = current_user
 	end
 

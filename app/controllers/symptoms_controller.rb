@@ -12,7 +12,7 @@ class SymptomsController < ApplicationController
 		@symptom.save
 		current_user.symptoms.push @symptom
 		current_user.instances.last.symptoms.push @symptom
-		redirect_to user_path(current_user)
+		redirect_to new_location_path
 	end
 	def index
 		

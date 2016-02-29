@@ -12,7 +12,7 @@ class SensesController < ApplicationController
 		@sense.save
 		current_user.senses.push @sense
 		current_user.instances.last.senses.push @sense
-		redirect_to user_path(current_user)
+		redirect_to new_trigger_path
 	end
 	def index
 		

@@ -12,7 +12,7 @@ class TriggersController < ApplicationController
 		@trigger.save
 		current_user.triggers.push @trigger
 		current_user.instances.last.triggers.push @trigger
-		redirect_to user_path(current_user)
+		redirect_to new_symptom_path
 	end
 	def index
 		

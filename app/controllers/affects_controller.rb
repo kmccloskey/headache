@@ -12,7 +12,7 @@ class AffectsController < ApplicationController
 		@affect.save
 		current_user.affects.push @affect
 		current_user.instances.last.affects.push @affect
-		redirect_to user_path(current_user)
+		redirect_to new_medication_path
 	end
 	def index
 		

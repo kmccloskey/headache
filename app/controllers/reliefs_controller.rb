@@ -12,7 +12,7 @@ class ReliefsController < ApplicationController
 		@relief.save
 		current_user.reliefs.push @relief
 		current_user.instances.last.reliefs.push @relief
-		redirect_to user_path(current_user)
+		redirect_to current_user
 	end
 	def index
 		

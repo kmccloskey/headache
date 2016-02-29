@@ -12,7 +12,7 @@ class WeathersController < ApplicationController
 		@weather.save
 		current_user.weathers.push @weather
 		current_user.instances.last.weathers.push @weather
-		redirect_to user_path(current_user)
+		redirect_to new_affect_path
 	end
 	def index
 		
