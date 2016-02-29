@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
   	puts "TEST: LOGGING IN"
 		@user = User.where(email: params[:email]).first     
 		if @user and @user.password == params[:password] 
-		session[:user_id] = @user.id
-		redirect_to user_path(@user)
+			session[:user_id] = @user.id
+			redirect_to user_path(@user)
 		else
 			redirect_to root_path
 		end

@@ -12,7 +12,7 @@ class MedicationsController < ApplicationController
 		@medication.save
 		current_user.medications.push @medication
 		current_user.instances.last.medications.push @medication
-		redirect_to user_path(current_user)
+		redirect_to new_relief_path
 	end
 	def index
 		

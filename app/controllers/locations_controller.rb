@@ -12,7 +12,7 @@ class LocationsController < ApplicationController
 		@location.save
 		current_user.locations.push @location
 		current_user.instances.last.locations.push @location
-		redirect_to user_path(current_user)
+		redirect_to new_weather_path
 	end
 	def index
 		

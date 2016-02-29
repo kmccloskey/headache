@@ -6,9 +6,9 @@ Users Show
 		<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
 			<% end %>
 			<br>
-<%= link_to "New Instance", new_instance_path %>
+<%= link_to "New Instance", new_user_instance_path(@user) %>
 <br>
-<%= link_to "All Instances", instance_path %>
+<%= link_to "All Instances", user_instances_path(@user) %>
 <br>
 <%= link_to "Update Bios", new_bio_path %>
 <br>
@@ -27,3 +27,24 @@ Users Show
 <%= link_to "New Affect", new_affect_path %>
 <br>
 <%= link_to "New Weather", new_weather_path %>
+<br>
+
+<% if @current_user %>
+<%= @current_user.symptoms.first.name %>
+<%= Bio.first.name %>
+<br>
+<%= Bio.first.name %>
+<br>
+<%= Bio.first.frequency %>
+<% else %>
+<% end %>
+
+
+
+
+
+
+
+
+
+

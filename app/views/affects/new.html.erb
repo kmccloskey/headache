@@ -1,6 +1,6 @@
 affects New
 <h2 class="user_new_box_title">New affect</h2>
-<%= form_for @affect do |f| %>
+<%= form_for Affect.new do |f| %>
 <%= f.text_field :description, :placeholder => 'Description' %>
 <%= f.text_field :title, :placeholder => 'Name' %>
 <%= f.submit :create, :value => "Save" %>

@@ -1,5 +1,5 @@
 <h2 class="user_new_box_title">New Instance</h2>
-<%= form_for @instance do |i| %>
+<%= form_for [@user, @instance] do |i| %>
 <%= i.text_field :pain_type, :placeholder => 'Headache or Migrane' %>
 <%= i.submit :create, :value => "Create New Instance" %>
 <% end %>
