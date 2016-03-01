@@ -1,50 +1,66 @@
-Users Show
+
+<% if @user.id == @current_user.id %>
+<%= link_to "Signout", log_out_path, :class => "sign_out_button" %>
 <br>
-		<% if @user.id == @current_user.id %>
-		<%= link_to "Signout", log_out_path, :class => "sign_out_button" %>
-		<br>
-		<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
-			<% end %>
-			<br>
+<div class="delete_account"><%= link_to("Delete Account", user_path(@user), method: :delete) %>
+	<% end %>
+	<br>
+</div>
 <%= link_to "New Instance", new_user_instance_path(@user) %>
 <br>
 <%= link_to "All Instances", user_instances_path(@user) %>
 <br>
 <%= link_to "Update Bios", new_bio_path %>
 <br>
-<%= link_to "New Symptom", new_symptom_path %>
-<br>
-<%= link_to "New Sense", new_sense_path %>
-<br>
-<%= link_to "New Trigger", new_trigger_path %>
-<br>
-<%= link_to "New Medication", new_medication_path %>
-<br>
-<%= link_to "New Relief", new_relief_path %>
-<br>
-<%= link_to "New Location", new_location_path %>
-<br>
-<%= link_to "New Affect", new_affect_path %>
-<br>
-<%= link_to "New Weather", new_weather_path %>
-<br>
-
-<% if @current_user %>
-<%= @current_user.symptoms.first.name %>
-<%= Bio.first.name %>
-<br>
-<%= Bio.first.name %>
-<br>
-<%= Bio.first.frequency %>
-<% else %>
-<% end %>
-
-
-
-
-
-
-
-
-
-
+<div class="col-md-6 graph_block">
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Symptoms</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.symptom_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Affects</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.affect_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Locations</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.location_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Medications</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.medication_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+</div>
+<div class="col-md-6 graph_block">
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Relief Methods</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.relief_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Pre-Symptoms</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.sense_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Triggers</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.trigger_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+	<div class="chart_title_block">
+		<h1 class="col-md-12 chart_title" style="text-align: center;">Weather</h1>
+	</div>
+	<div class="pie_charts col-md-12">
+		<%= pie_chart @current_user.weather_name_count, colors: ["#ea9e70", "#a48a9e", "#ce7d78", "#c6e1e8", "#63b598", "#88DBB0", "#6FBDC3", "#325674", "#5a7558", "#EA7558"] %>
+	</div>
+</div>
