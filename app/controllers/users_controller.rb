@@ -36,6 +36,7 @@ class UsersController < ApplicationController
 	 # set variable to find user by user_id
 	 @user = User.find(params[:id])
 	 @current_user = current_user
+	 @symptoms = @user.symptoms.all
 	end
 
 
