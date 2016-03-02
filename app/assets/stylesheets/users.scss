@@ -13,7 +13,214 @@
 // #5a7558
 // #EA7558
 
-
-.chart_title_block h1 {
-	color: green;
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
 }
+
+.user_new_sign_in_title {
+	margin: 0;
+	text-align: center;
+	margin-top: 5%;
+	transform: translateY(-50%);
+	color: white;
+	font-size: 6vw;
+	margin-bottom: 0;
+	text-shadow: 1px 1px black;
+}
+
+.user_new_sign_up_title {
+	margin: 0;
+	text-align: center;
+	margin-top: 5%;
+	transform: translateY(-50%);
+	color: white;
+	font-size: 6vw;
+	margin-bottom: 0;
+	text-shadow: 1px 1px black;
+}
+
+.user_new_bg {
+	background-color: #88DBB0;
+	height: 100%;
+	width: 100%;
+}
+
+.user_new_sign_in_top {
+	border: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	width: 15vw;
+	border: 1px solid #c6e1e8;
+	height: 6vw;
+	text-align: center;
+	font-size: 3vw;
+}
+
+.sign_up_form_top {
+	border: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	width: 15vw;
+	border: 1px solid #c6e1e8;
+	height: 6vw;
+	text-align: center;
+	font-size: 3vw;
+}
+
+.user_new_sign_in_bottom {
+	border: none;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 15vw;
+	height: 6vw;
+	text-align: center;
+	font-size: 3vw;
+	border: 1px solid #c6e1e8;
+}
+
+.sign_up_form_bottom {
+	border: none;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 15vw;
+	height: 6vw;
+	text-align: center;
+	font-size: 3vw;
+	border: 1px solid #c6e1e8;
+}
+
+.user_new_sign_in_button {
+	border: none;
+	height: 3vw;
+	width: 8vw;
+	float: none;
+	border-radius: 5px;
+	border: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	text-shadow: 1px 1px black;
+	transform: translateX(-50%);
+	margin-top: 2vw;
+}
+
+.sign_up_create_button {
+	border: none;
+	height: 3vw;
+	width: 8vw;
+	float: none;
+	border-radius: 5px;
+	border: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	text-shadow: 1px 1px black;
+	transform: translateX(-50%);
+	margin-top: 2vw;
+}
+
+.user_login_link {
+	text-align: center;
+}
+
+.user_new_page_title {
+	border-bottom: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 9.1%;
+}
+
+.user_new_page_title p {
+	font-family: 'Shadows Into Light Two', cursive;
+	color: white;
+	font-size: 4vw;
+	text-shadow: 1px 1px black;
+	display: block;
+	padding-left: 1vw;
+}
+
+.users_new_sign_up_box_to_hide {
+	display: none;
+}
+
+.user_new_bottom_box {
+	border-top: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 26.2%;
+	margin-top: 3vw;
+	overflow: none;
+}
+
+.users_show_bg {
+	background-color: #63b598;
+	height: 100%;
+}
+
+.nav_bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0;
+}
+
+.nav_bar li {
+    float: right;
+    padding: 0;
+}
+
+.nav_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+    text-shadow: 1px 1px black;
+    font-size: 1.5vw;
+}
+
+.nav_bar {
+	border-bottom: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 9.1%;
+	text-align: right;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+rect {
+	fill: rgba(255, 255, 255, 0.0);
+}
+
+.charts_container {
+	height: 90.9%;
+	overflow: scroll;
+}
+
+.pie_charts {
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.row {
+	margin-top: 5vw;
+	z-index: -50;
+}
+
+.chart_title {
+	font-family: 'Righteous', cursive;
+	color: white;
+	text-decoration: underline;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	margin-bottom: -3%;
+}
+
+
+

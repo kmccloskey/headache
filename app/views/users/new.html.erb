@@ -1,15 +1,25 @@
-<h2 class="user_new_box_title">Sign in</h2>
-<%= form_tag user_login_path do%>
-<%= text_field_tag :email, "", :class => 'sign_in_top', :placeholder => "Email" %>
-<%= password_field_tag :password_digest, "", :class => 'sign_in_bottom', :placeholder => 'Password' %>
-<%= submit_tag :Sign_In, :value => "Sign In", :class => 'sign_in_button', method: :user_login %>
-<% end %>
-<h2 class="user_new_box_title">Sign Up</h2>
-<%= form_for @user do |f| %>
-<%= f.text_field :email, :class => 'sign_up_form_top form_input', :placeholder => 'Email' %>
-<%= f.password_field :password, :class => 'sign_up_form_bottom form_input', :placeholder => 'Password' %>
-<%= f.submit :create, :class => 'sign_up_create_button', :value => "Sign Up" %>
-<% end %>
-
-
+<div class="user_new_bg">
+	<div class="user_new_page_title col-md-12">
+		<p>Headache Diary</p>
+	</div>
+	<div class="users_new_box_to_show">
+		<h2 class="user_new_sign_in_title col-md-12">Sign in</h2>
+		<%= form_tag user_login_path do%>
+		<%= text_field_tag :email, "", :class => 'user_new_sign_in_top col-md-4 col-md-offset-4', :placeholder => "Email" %>
+		<%= password_field_tag :password_digest, "", :class => 'user_new_sign_in_bottom col-md-4 col-md-offset-4', :placeholder => 'Password' %>
+		<%= submit_tag :Sign_In, :value => "Sign In", :class => 'user_new_sign_in_button col-md-offset-6 col-md-1', method: :user_login %>
+		<% end %>
+		<p class="col-sm-12 user_login_link">Already a user <a href="#" class="show_sign_up_form">Login</a></p>
+	</div>
+	<div class="users_new_sign_up_box_to_hide">
+		<h2 class="user_new_sign_up_title col-md-12">Sign Up</h2>
+		<%= form_for @user do |f| %>
+		<%= f.text_field :email, :class => 'sign_up_form_top form_input col-md-4 col-md-offset-4', :placeholder => 'Email' %>
+		<%= f.password_field :password, :class => 'sign_up_form_bottom form_input col-md-4 col-md-offset-4', :placeholder => 'Password' %>
+		<%= f.submit :create, :class => 'sign_up_create_button col-md-offset-6 col-md-1', :value => "Sign Up" %>
+		<% end %>
+	</div>
+	<div class="user_new_bottom_box col-sm-12">
+	</div>
+</div>
 

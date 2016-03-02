@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 	 if @user.save
 		 session[:user_id] = @user.id
 		 # redirect to the newly create user's profile page /show
-		 redirect_to user_path(@user)
+		 redirect_to new_bio_path
 	 else
 		 flash[:notice] = "Invalid Email"
  	 	redirect_to root_path

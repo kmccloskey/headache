@@ -1,7 +1,23 @@
-New Sense
-<h2 class="user_new_box_title">New Sense</h2>
-<%= form_for Sense.new do |f| %>
-<%= f.text_field :sense, :placeholder => 'Did you sense it?' %>
+<div class="user_new_page_title col-md-6 nopadding">
+		<p>Headache Diary</p>
+	</div>
+	<div class="nav_bar col-md-6 nopadding">
+		<ul>
+			<li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
+			<li><%= link_to "New Headache", new_user_instance_path(@user) %></li>
+			<li><%= link_to "History", user_instances_path(@user) %></li>
+			<li><%= link_to "Profile", new_bio_path %></li>
+			<li><%= link_to "Home", user_path(@user) %></li>
+		</ul>
+</div>
+<div class="sense_new_bg">
+	<div class="sense_new_phrase">
+		<h1>Were you able to sense it?</h1>
+	</div>
+<%= form_for @sense do |f| %>
+<%= f.text_field :sense, :placeholder => 'Yes / No' %>
+<%= f.label "Notes" %>
 <%= f.text_field :how_sense, :placeholder => 'How did you sense it' %>
-<%= f.submit :create, :value => "Save" %>
+<%= f.submit :create, :value => "Next" %>
 <% end %>
+</div>

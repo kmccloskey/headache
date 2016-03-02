@@ -1,10 +1,46 @@
-Bios new
-<h2 class="user_new_box_title">New Profile</h2>
-<%= form_for @bio do |f| %>
-<%= f.text_field :gender, :placeholder => 'Gender' %>
-<%= f.text_field :name, :placeholder => 'Name' %>
-<%= f.text_field :pain_type, :placeholder => 'Type' %>
-<%= f.text_field :frequency, :placeholder => 'Frequency' %>
-<%= f.text_field :goal, :placeholder => 'Goal' %>
-<%= f.submit :create, :value => "Save" %>
-<% end %>
+<div class="user_new_page_title col-md-6 nopadding">
+	<p>Headache Diary</p>
+</div>
+<div class="nav_bar col-md-6 nopadding">
+	<ul>
+		<li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
+		<li><%= link_to "New Headache", new_user_instance_path(@user) %></li>
+		<li><%= link_to "History", user_instances_path(@user) %></li>
+		<li><%= link_to "Profile", new_bio_path %></li>
+		<li><%= link_to "Home", user_path(@user) %></li>
+	</ul>
+</div>
+<!-- CONTENT -->
+<div class="bio_new_bg">
+	<h2 class="bio_new_box_title col-md-12">Profile</h2>
+	<div class="bio_new_form">
+		<%= form_for @bio do |f| %>
+		<div class="bio_new_name_box col-md-16">
+			<%= f.label "Name" %>
+			<br>
+			<%= f.text_field :name, :class => 'bio_new_name_field', :placeholder => 'Name' %>
+		</div>
+		<div class="bio_new_gender_box col-md-12">
+			<%= f.label "Gender" %>
+			<br>
+			<%= f.text_field :gender, :class => 'bio_new_gender_field', :placeholder => 'Gender' %>
+		</div>
+		<div class="bio_new_pain_type_box col-md-12">
+			<%= f.label "What type of pain are you having?" %>
+			<br>
+			<%= f.text_field :pain_type, :class => 'bio_new_pain_type_field', :placeholder => "Pain Type" %>
+		</div>
+		<div class="bio_new_frequency_box col-md-12">
+			<%= f.label 'How frequently do you have headaches?' %>
+			<br>
+			<%= f.text_field :frequency, :class => 'bio_new_frequency_field', :placeholder => "Frequency" %>
+		</div>
+		<div class="bio_new_goal_box col-md-12">
+			<%= f.label "What is your goal of using this app?" %>
+			<br>
+			<%= f.text_field :goal, :class => 'bio_new_goal_field', :placeholder => 'Goal' %>
+		</div>
+		<%= f.submit :create, :value => "Save", :class => 'bio_new_button' %>
+		<% end %>
+	</div>
+</div>
