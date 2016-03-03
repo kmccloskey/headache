@@ -1,6 +1,25 @@
-Trigger New
-<h2 class="user_new_box_title">New Trigger</h2>
-<%= form_for Trigger.new do |f| %>
-<%= f.text_field :title, :placeholder => 'What Triggered It' %>
-<%= f.submit :create, :value => "Save" %>
-<% end %>
+<div class="user_new_page_title col-md-6 nopadding">
+	<p>Headache Diary</p>
+</div>
+<div class="nav_bar col-md-6 nopadding">
+	<ul>
+		<li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
+		<li><%= link_to "New Headache", new_user_instance_path(@user) %></li>
+		<li><%= link_to "History", user_instances_path(@user) %></li>
+		<li><%= link_to "Profile", new_bio_path %></li>
+		<li><%= link_to "Home", user_path(@user) %></li>
+	</ul>
+</div>
+<div class="trigger_new_bg">
+	<div class="trigger_new_phrase">
+		<h1>What was the trigger?</h1>
+	</div>
+	<%= form_for @trigger do |f| %>
+	<div class="trigger_new_text_box">
+		<%= f.text_field :title, :placeholder => 'Trigger Name', :class => "trigger_new_text_field" %>
+	</div>
+	<div class="trigger_new_button_box">
+		<%= f.submit :create, :value => "Next", :class => 'trigger_new_button' %>
+	</div>
+	<% end %>
+</div>
