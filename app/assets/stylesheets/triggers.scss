@@ -1,3 +1,67 @@
 // Place all the styles related to the triggers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.trigger_new_phrase h1 {
+	margin-top: 0;
+}
+
+.trigger_new_bg {
+	background-color: #a48a9e;
+	height: 100%;
+}
+
+.trigger_new_phrase h1 {
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px black;
+	font-family: 'Righteous', cursive;
+	font-size: 5vw;
+	padding-top: 10%;
+}
+
+.trigger_new_text_box {
+	text-align: center;
+}
+
+.trigger_new_button_box {
+	text-align: center;
+}
+
+.trigger_new_text_field {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 15vw;
+	font-size: 20px;
+}
+
+.trigger_new_button {
+	width: 15vw;
+	height: 5vw;
+	border: 1px white solid;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	margin-top: 3%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

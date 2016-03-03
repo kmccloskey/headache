@@ -38,7 +38,7 @@
 		<div class="bio_new_goal_box col-md-12">
 			<%= f.label "What is your goal of using this app?" %>
 			<br>
-			<%= f.text_field :goal, :class => 'bio_new_goal_field', :placeholder => 'Goal' %>
+			<%= f.text_area :goal, :class => 'bio_new_goal_field', :placeholder => 'Goal' %>
 		</div>
 		<%= f.submit :create, :value => "Save", :class => 'bio_new_button' %>
 		<% end %>

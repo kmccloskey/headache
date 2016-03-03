@@ -1,7 +1,28 @@
-weathers New
-<h2 class="user_new_box_title">New weather</h2>
-<%= form_for Weather.new do |f| %>
-<%= f.text_field :description, :placeholder => 'Description' %>
-<%= f.text_field :title, :placeholder => 'Title' %>
-<%= f.submit :create, :value => "Save" %>
-<% end %>
+<div class="user_new_page_title col-md-6 nopadding">
+	<p>Headache Diary</p>
+</div>
+<div class="nav_bar col-md-6 nopadding">
+	<ul>
+		<li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
+		<li><%= link_to "New Headache", new_user_instance_path(@user) %></li>
+		<li><%= link_to "History", user_instances_path(@user) %></li>
+		<li><%= link_to "Profile", new_bio_path %></li>
+		<li><%= link_to "Home", user_path(@user) %></li>
+	</ul>
+</div>
+<div class="weather_new_bg">
+	<div class="weather_new_phrase">
+		<h1>What was the weather like?</h1>
+	</div>
+	<%= form_for @weather do |f| %>
+	<div class="weather_new_text_box">
+	<%= f.text_field :title, :placeholder => 'Weater', :class => "weather_new_text_field_name" %>
+	</div>
+	<div class="weather_new_text_box">
+	<%= f.text_area :description, :placeholder => 'Description', :class => "weather_new_text_field_description" %>
+	</div>
+	<div class="weather_new_button_box">
+	<%= f.submit :create, :value => "Save", :class => "weather_new_button_field" %>
+	</div>
+	<% end %>
+</div>

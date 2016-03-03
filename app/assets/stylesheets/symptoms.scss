@@ -1,3 +1,89 @@
 // Place all the styles related to the symptoms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.symptom_new_phrase h1 {
+	margin-top: 0;
+}
+
+.symptom_new_bg {
+	background-color: #c6e1e8;
+	height: 100%;
+}
+
+.symptom_new_phrase h1 {
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px black;
+	font-family: 'Righteous', cursive;
+	font-size: 5vw;
+	padding-top: 10%;
+}
+
+.symptom_new_text_box {
+	text-align: center;
+	margin-top: 1%;
+}
+
+.symptom_new_button_box {
+	text-align: center;
+}
+
+.symptom_new_text_field_name {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 15vw;
+	font-size: 20px;
+}
+
+.symptom_new_text_field_description {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 25vw;
+	font-size: 20px;
+	height: 5vw;
+}
+
+.symptom_new_label {
+	text-align: center;
+	margin-top: 1%;
+}
+
+.symptom_new_button_field {
+	width: 15vw;
+	height: 5vw;
+	border: 1px white solid;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	margin-top: 3%;
+	border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
