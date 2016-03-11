@@ -31,6 +31,7 @@ gem 'better_errors', '~> 2.1', '>= 2.1.1'
 gem 'groupdate', '~> 2.1.1'
 gem 'active_median', '~> 0.1.0'
 # Use Capistrano for deployment
+gem 'rails-erd', '~> 1.4', '>= 1.4.6'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
