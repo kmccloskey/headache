@@ -16,7 +16,7 @@
 	</div>
 	<%= form_for @relief do |f| %>
 	<div class="relief_new_text_box">
-		<%= f.text_field :title, :placeholder => 'How?', :class => "relief_new_text_field_name" %>
+		<%= f.collection_select :title, @current_user.reliefs.select(:title).uniq, :title, :title, :prompt => "Select ...", :class => "instance_new_field" %>
 	</div>
 	<div class="relief_new_text_box">
 		<%= f.text_area :description, :placeholder => 'Description', :class => "relief_new_text_field_description" %>

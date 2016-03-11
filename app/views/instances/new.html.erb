@@ -16,7 +16,7 @@
 	</div>
 	<%= form_for [@user, @instance] do |i| %>
 	<div class="instance_new_field col-md-12">
-	<%= i.text_field :pain_type, :class => "instance_new_field", :placeholder => 'Headache or Migrane' %>
+	<%= i.collection_select :pain_type, @current_user.instances.select(:pain_type).uniq, :pain_type, :pain_type, :prompt => "Select ...", :class => "instance_new_field" %>
 	</div>
 	<div class="instance_new_button_box col-md-12">
 	<%= i.submit :create, :class => "instance_new_button", :value => "Begin" %>

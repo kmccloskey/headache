@@ -16,13 +16,13 @@
 	</div>
 	<%= form_for @weather do |f| %>
 	<div class="weather_new_text_box">
-	<%= f.text_field :title, :placeholder => 'Weater', :class => "weather_new_text_field_name" %>
+		<%= f.collection_select :title, @current_user.weathers.select(:title).uniq, :title, :title, :class => "instance_new_field" %>
 	</div>
 	<div class="weather_new_text_box">
 	<%= f.text_area :description, :placeholder => 'Description', :class => "weather_new_text_field_description" %>
 	</div>
 	<div class="weather_new_button_box">
-	<%= f.submit :create, :value => "Save", :class => "weather_new_button_field" %>
+	<%= f.submit :create, :value => "Next", :class => "weather_new_button_field" %>
 	</div>
 	<% end %>
 </div>

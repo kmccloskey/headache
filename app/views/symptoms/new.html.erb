@@ -16,7 +16,7 @@
 	</div>
 	<%= form_for @symptom do |f| %>
 	<div class="symptom_new_text_box">
-		<%= f.text_field :name, :placeholder => 'Symptom Name', :class => "symptom_new_text_field_name" %>
+		<%= f.collection_select :name, @current_user.symptoms.select(:name).uniq, :name, :name, :class => "instance_new_field" %>
 	</div>
 	<div class="symptom_new_text_box">
 		<%= f.text_area :description, :placeholder => 'Description:', :class => "symptom_new_text_field_description" %>

@@ -16,7 +16,7 @@
 	</div>
 	<%= form_for @trigger do |f| %>
 	<div class="trigger_new_text_box">
-		<%= f.text_field :title, :placeholder => 'Trigger Name', :class => "trigger_new_text_field" %>
+		<%= f.collection_select :title, @current_user.triggers.select(:title).uniq, :title, :title, :class => "instance_new_field" %>
 	</div>
 	<div class="trigger_new_button_box">
 		<%= f.submit :create, :value => "Next", :class => 'trigger_new_button' %>

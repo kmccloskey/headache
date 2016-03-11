@@ -16,13 +16,13 @@
 	</div>
 <%= form_for @sense do |f| %>
 <div class="sense_new_yes_no_box">
-	<%= f.text_field :sense, :placeholder => 'Yes / No', :class => "sense_new_yes_no_field" %>
+	<%= f.collection_select :sense, @current_user.senses.select(:sense).uniq, :sense, :sense, :class => "instance_new_field" %>
 </div>
 <div class="sense_new_label">
 	<%= f.label "How did you sense it?" %>
 </div>
 <div class="sense_new_text_field">
-	<%= f.text_area :how_sense, :placeholder => 'How did you sense it', :class => "sense_new_text_field_box" %>
+	<%= f.collection_select :how_sense, @current_user.senses.select(:how_sense).uniq, :how_sense, :how_sense, :class => "instance_new_field" %>
 </div>
 <div class="sense_new_button_box col-md-12">
 	<%= f.submit :create, :value => "Next", :class => "sense_new_button" %>

@@ -16,7 +16,7 @@
 	</div>
 	<%= form_for @medication do |f| %>
 	<div class="medication_new_text_box">
-		<%= f.text_field :name, :placeholder => 'Name', :class => "medication_new_text_field_name" %>
+		<%= f.collection_select :name, @current_user.medications.select(:name).uniq, :name, :name, :class => "instance_new_field" %>
 	</div>
 	<div class="medication_new_text_box">
 		<%= f.text_field :dose, :placeholder => 'Dose', :class => "medication_new_text_field_name" %>
