@@ -55,3 +55,41 @@
 	font-family: 'Righteous', cursive;
 	font-size: 5vw;
 }
+
+.instance_index_bg {
+	background-color: #ce7d78;
+	height: 100%;
+}
+
+.instance_index_box {
+	border: 1px solid white;
+	text-align: center;
+	height: 70%;
+	overflow: scroll;
+}
+
+.instance_index_title {
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+}
+
+.instance_index_title a {
+	font-size: 3vw;
+	color: white;
+	text-decoration: underline;
+}
+
+.instance_index_date {
+	border-bottom: 1px solid white;
+	color: white;
+	font-size: 3vw;
+}
+
+.instance_index_history h1 {
+	margin-top: 0;
+	text-align: center;
+	color: white;
+	font-family: 'Righteous', cursive;
+	font-size: 5vw;
+	text-shadow: 1px 1px black;
+}
