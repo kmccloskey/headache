@@ -1,1 +1,26 @@
-Instance Index
+<div class="user_new_page_title col-md-6 nopadding">
+	<p>Headache Diary</p>
+</div>
+<div class="nav_bar col-md-6 nopadding">
+	<ul>
+		<li><%= link_to "Signout", log_out_path, :class => "sign_out_button" %></li>
+		<li><%= link_to "New Headache", new_user_instance_path(@current_user) %></li>
+		<li><%= link_to "History", user_instances_path(@current_user) %></li>
+		<li><%= link_to "Home", user_path(@current_user) %></li>
+	</ul>
+</div>
+<div class="instance_index_bg">
+	<div class="instance_index_history col-md-12">
+		<h1>History</h1>
+	</div>
+	<div class="instance_index_box col-md-8 col-md-offset-2">
+		<% @current_user.instances.each do |x| %>
+		<div class="instance_index_date col-md-6">
+			<%= x.created_at.strftime("%b %d, %Y") %>
+		</div>
+		<div class="instance_index_title col-md-6">
+			<%= link_to x.pain_type, user_instance_path(@current_user.id, x.id) %>
+		</div>
+		<% end %>
+	</div>
+</div>

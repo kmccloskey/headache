@@ -23,7 +23,6 @@ class InstancesController < ApplicationController
 
 	def index
 		@current_user = current_user
-		@all_instances = Instance.all
 	end
 
 private
